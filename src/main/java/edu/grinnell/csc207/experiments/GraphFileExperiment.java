@@ -25,7 +25,7 @@ public class GraphFileExperiment {
     // A small graph so that we can force it to expand.
     Graph g = new UndirectedGraph();
     g.readGraph(args[0]);
-    g.dump(pen);
+    g.dumpWithNames(pen);
     g.dumpWithNames(pen);
     g.write(pen);
   } // main(String[])

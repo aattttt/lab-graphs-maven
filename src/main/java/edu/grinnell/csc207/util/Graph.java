@@ -297,6 +297,18 @@ public class Graph {
     } // for
   } // write(PrintWriter)
 
+
+  public void reachableFrom(PrintWriter pen, int vertex) {
+    if (!marked(vertex)) { // Probably not be necessary
+      mark(v);
+      pen.println(v);
+      for (Vertex neighbor : v.neighbors()) {
+        if (!marked(neighbor)) {
+          traverseRecursive(pen, neighbor);
+        } // if
+      } // for
+    } // if
+  }
   /**
    * Get the number of edges.
    *
